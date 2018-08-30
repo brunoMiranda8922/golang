@@ -1,22 +1,16 @@
 package routers
 
 import (
-	"net/http"
-
+	"github.com/Projeto/usuarios/controlles"
 	"github.com/labstack/echo"
 )
 
+//App é uma instância de echo
 var App *echo.Echo
 
 func init() {
 	App = echo.New()
 
-	App.GET("/", callback)
-}
-
-func callback(content echo.Context) error {
-	menssage := "Hello Golang"
-	returr := content.String(http.StatusOK, menssage)
-	return returr
+	App.GET("/", controlles.Callback)
 
 }

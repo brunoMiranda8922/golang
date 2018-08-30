@@ -2,9 +2,11 @@ package main
 
 import (
 	"github.com/Projeto/usuarios/routers"
+	"github.com/labstack/echo/middleware"
 )
 
 func main() {
-	//aula 16
-	routers.App.Start(":3000")
+	serverUp := routers.App
+	serverUp.Use(middleware.Logger())
+	serverUp.Logger.Fatal(serverUp.Start(":3000"))
 }
