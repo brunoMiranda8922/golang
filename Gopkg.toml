@@ -37,7 +37,15 @@ required = ["github.com/labstack/echo"]
 [[constraint]]
   name ="github.com/labstack/echo/middleware"
   version = "1"
-  
+
+[[constraint]]
+  name = "upper.io/db.v3/mysql"
+  version = "3.3.0"
+
+[[constraint]] 
+  name = "github.com/go-sql-driver/mysql"
+  version = "1.4.0"
+
 [prune]
   go-tests = true
   unused-packages = true
