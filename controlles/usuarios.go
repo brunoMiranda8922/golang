@@ -9,12 +9,13 @@ import (
 
 //Callback é página inicial da aplicação
 func Callback(content echo.Context) error {
-	menssage := "Hello Golang"
+	menssage := "hello"
 	returr := content.String(http.StatusOK, menssage)
 	return returr
 
 }
 
+//Inserir new user
 func Inserir(i echo.Context) error {
 	nome := i.FormValue("nome")
 	email := i.FormValue("email")

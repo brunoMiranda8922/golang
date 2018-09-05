@@ -101,11 +101,19 @@
   version = "v1.1.0"
 
 [[projects]]
-  digest = "1:b1186fc8a0c80fb2b3fcb1b7313d69b386e755bb412ab6338ad9580499d38bca"
+  digest = "1:a6560174b62c270fbfeccfff6e7adaf66177be3aeaa97787bcb45dee94d156c2"
   name = "upper.io/db.v3"
   packages = [
     ".",
+    "internal/cache",
+    "internal/cache/hashstructure",
     "internal/immutable",
+    "internal/sqladapter",
+    "internal/sqladapter/compat",
+    "internal/sqladapter/exql",
+    "lib/reflectx",
+    "lib/sqlbuilder",
+    "mysql",
   ]
   pruneopts = "UT"
   revision = "199d13d76c7cfba05ea0327375056fdabc8bea80"
@@ -115,10 +123,10 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/go-sql-driver/mysql",
     "github.com/labstack/echo",
     "github.com/labstack/echo/middleware",
     "upper.io/db.v3",
+    "upper.io/db.v3/mysql",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

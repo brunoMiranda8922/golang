@@ -13,8 +13,8 @@ func init() {
 
 	App.GET("/", controlles.Callback)
 
-	api := App.Group("/v1/")
+	api := App.Group("/v1")
 
-	api.POST("/inserir", controlles.Inserir)
+	api.POST("/insert", controlles.Inserir)
 
 }

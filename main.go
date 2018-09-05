@@ -2,6 +2,8 @@ package main
 
 import (
 	"github.com/Projeto/usuarios/routers"
+	//_ "github.com/echo-contrib/pongor"
+	_ "github.com/flosch/pongo2"
 	"github.com/labstack/echo/middleware"
 )
 
